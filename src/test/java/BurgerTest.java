@@ -9,6 +9,7 @@ import praktikum.Ingredient;
 import praktikum.IngredientType;
 
 import static org.junit.Assert.*;
+import static praktikum.Constants.DELTA;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
@@ -61,7 +62,7 @@ public class BurgerTest {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
         float actualBurgerPrice = burger.getPrice();
-        assertEquals(expectedBurgerPrice, actualBurgerPrice, 0);
+        assertEquals(expectedBurgerPrice, actualBurgerPrice, DELTA);
     }
 
     @Test

@@ -7,6 +7,8 @@ import java.util.Arrays;
 import java.util.Collection;
 
 import static org.junit.Assert.assertEquals;
+import static praktikum.Constants.DELTA;
+
 // Не правильно прочитал задания, и сделал этот автотест. Удалять жаль-кросивое.
 @RunWith(Parameterized.class)
 public class DataBaseParametrizedTest {
@@ -32,6 +34,6 @@ public DataBaseParametrizedTest (int index, String expectedName, float expectedP
         String actualName = database.availableBuns().get(index).getName();
         float actualPrice = database.availableBuns().get(index).getPrice();
         assertEquals(expectedName,actualName);
-        assertEquals(expectedPrice,actualPrice,0);
+        assertEquals(expectedPrice,actualPrice, DELTA);
     }
 }

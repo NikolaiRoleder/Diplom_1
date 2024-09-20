@@ -3,6 +3,7 @@ import praktikum.Ingredient;
 import praktikum.IngredientType;
 
 import static org.junit.Assert.assertEquals;
+import static praktikum.Constants.DELTA;
 
 public class IngredientTest {
     String expectedName = "hot sauce";
@@ -23,6 +24,6 @@ public class IngredientTest {
     @Test
     public void ingredientPriceTest() {
         float actualPrice = ingredient.getPrice();
-        assertEquals(expectedPrice, actualPrice,0);
+        assertEquals(expectedPrice, actualPrice,DELTA);
     }
 }
